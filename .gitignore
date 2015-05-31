@@ -1,0 +1,6 @@
+*.zip
+.dart-up
+dart-sdk
+chromium
+api_docs
+node_modules

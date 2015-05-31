@@ -1,0 +1,19 @@
+{
+  "name": "dart-up",
+  "version": "0.1.0",
+  "description": "updates the Dart SDK and Dartium",
+  "keywords": ["dart", "sdk", "dartium", "updater"],
+  "license": "MIT",
+  "author": "Jos Hirth",
+  "bin": "dart-up.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahonnaise/dart-up.git"
+  },
+  "cpu": ["x64", "ia32"],
+  "preferGlobal": true,
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "commander": "^2.8.1"
+  }
+}
