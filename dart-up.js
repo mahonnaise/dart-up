@@ -99,10 +99,10 @@ function download(url, fileName) {
 
 function downloadAndExtract(url) {
 	var fileName = url.split('/').pop(); // XXX: use os.tmpdir()?
-	console.log('[' + fileName + '] started');
+	console.log('[' + fileName + '] downloading...');
 	return new Promise(function(resolve, reject) {
 		download(url, fileName).then(function() {
-			console.log('[' + fileName + '] done');
+			console.log('[' + fileName + '] extracting...');
 			try {
 				var zip = new AdmZip(fileName);
 				// Special case for Dartium.
