@@ -1,4 +1,4 @@
-# dart-up
+# dart-up 0.2.0
 
 A command line tool for updating the Dart SDK and Dartium.
 
@@ -14,6 +14,8 @@ It picks the correct archives for the current platform and architecture automati
 
 1. Install [Node.js](http://nodejs.org/) if you haven't done that already.
 2. Run `npm install --global dart-up` to put the `dart-up` command in your system path, allowing it to be run from any directory.
+
+To update `dart-up` itself, run: `npm update --global dart-up`.
 
 ## Usage
 
