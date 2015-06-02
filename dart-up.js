@@ -26,8 +26,8 @@ function getUrl(version, thing) {
 	var channel = program.stable ? 'stable' : 'dev';
 	var parts = [];
 	parts.push({
-		sdk: 'sdk/dartsdk',
-		dartium: 'dartium/dartium',
+		SDK: 'sdk/dartsdk',
+		Dartium: 'dartium/dartium',
 		docs: 'api-docs/dart-api-docs'
 	}[thing]);
 	if (thing !== 'docs') {
@@ -41,7 +41,7 @@ function getUrl(version, thing) {
 
 		// current arch
 		var arch = process.arch;
-		if (thing === 'dartium' && (platform === 'windows' || platform === 'macos')) {
+		if (thing === 'Dartium' && (platform === 'windows' || platform === 'macos')) {
 			// there are no 64bit versions of Dartium for Windows or Mac OS
 			arch = 'ia32';
 		}
@@ -157,9 +157,9 @@ function getPackageVersion() {
 				console.log('Installing [' + remote.version + '].');
 			}
 
-			var tools = ['sdk'];
+			var tools = ['SDK'];
 			if (program.dartium) {
-				tools.push('dartium');
+				tools.push('Dartium');
 			}
 			if (program.docs) {
 				tools.push('docs');
