@@ -35,6 +35,11 @@ By default, dart-up uses the "dev" channel. The SDK is always downloaded.
 Dartium can be excluded while the docs can be included.
 ```
 
-### Eclipse
+### For Eclipse Users
 
-If you use Eclipse with the Dart plugin, just run `dart-up` in the *eclipse* directory.
+If you use (or want to use) Eclipse with the Dart plugin, just run `dart-up` in the *eclipse* directory and you're good to go. Run `dart-up` before you start Eclipse whenever you want to check for updates.
+
+## FAQ
+
+**Q:** Why isn't `dart-up` written in Dart?  
+**A:** On Windows, an executable can't be removed, renamed, or overwritten if it's currently running. The updater has to be separate from the executable it updates. So, if you want to update some runtime environment, you can't use that runtime environment for that job. A temporary copy would theoretically work, but that would make things needlessly complicated.
