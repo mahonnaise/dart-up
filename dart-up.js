@@ -22,7 +22,7 @@ function checkArch() {
 	}
 }
 
-function getUrl(revision, thing) {
+function getUrl(version, thing) {
 	var channel = program.stable ? 'stable' : 'dev';
 	var parts = [];
 	parts.push({
@@ -49,7 +49,7 @@ function getUrl(revision, thing) {
 
 		parts.push('release');
 	}
-	return 'https://storage.googleapis.com/dart-archive/channels/' + channel + '/release/' + revision + '/' + parts.join('-') + '.zip';
+	return 'https://storage.googleapis.com/dart-archive/channels/' + channel + '/release/' + version + '/' + parts.join('-') + '.zip';
 }
 
 function fetchRemoteVersion() {
@@ -163,7 +163,7 @@ function getPackageVersion() {
 
 			Promise.all(
 				tools
-					.map(getUrl.bind(null, remote.revision))
+					.map(getUrl.bind(null, remote.version))
 					.map(downloadAndExtract)
 			).then(function() {
 				fs.writeFileSync('.dart-up', JSON.stringify(remote));
