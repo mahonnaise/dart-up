@@ -151,7 +151,11 @@ function getPackageVersion() {
 			console.log(local.version + ' (' + local.revision + ') is already installed.');
 			console.log('Nothing to update.');
 		} else {
-			console.log('Updating ' + local.version + ' (' + local.revision + ') to ' + remote.version + ' (' + remote.revision + ').');
+			if (local.version) {
+				console.log('Updating [' + local.version + '] to [' + remote.version + '].');
+			} else {
+				console.log('Installing [' + remote.version + '].');
+			}
 
 			var tools = ['sdk'];
 			if (program.dartium) {
