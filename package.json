@@ -1,6 +1,6 @@
 {
   "name": "dart-up",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "updates the Dart SDK and Dartium",
   "keywords": ["dart", "sdk", "dartium", "updater"],
   "license": "MIT",
